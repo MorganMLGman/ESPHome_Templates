@@ -100,6 +100,9 @@ sensor:
     icon: mdi:clock-outline
     entity_category: "diagnostic"
 
+  - platform: internal_temperature
+    name: "Internal Temperature"
+
 button:
   - platform: shutdown
     name: Shut Down
@@ -116,7 +119,3 @@ light:
     pin: 
       number: GPIO8
       inverted: True
-
-sensor:
-  - platform: internal_temperature
-    name: "Internal Temperature"
