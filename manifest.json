@@ -8,7 +8,7 @@
       "chipFamily": "ESP32-C3",
       "ota": {
         "path": "esp32_c3-esp32c3/esp32_c3-esp32c3.ota.bin",
-        "md5": "7001d52729637b27e02c31a4e56ff8a2"
+        "md5": "6dab1813ab715813705eb0af330b59a9"
       },
       "parts": [
         {
