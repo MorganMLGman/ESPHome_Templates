@@ -52,6 +52,10 @@ esp32_improv:
 # Handy if your device has a usb port for the user to add credentials when they first get it.
 improv_serial:
 
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+
 text_sensor:
   - platform: version
     name: ESPHome Version
