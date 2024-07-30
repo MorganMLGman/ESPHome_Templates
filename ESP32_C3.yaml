@@ -8,8 +8,7 @@ esphome:
   platformio_options:
     board_build.flash_mode: dio
     board_build.mcu: esp32c3
-    platform_packages:
-      - toolchain-riscv32-esp
+    board_build.f_cpu: 80000000L
 
   # This will allow for project identification,
   # configuration and updates.
