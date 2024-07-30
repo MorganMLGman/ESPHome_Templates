@@ -108,4 +108,6 @@ button:
 light:
   - platform: status_led
     name: "User LED"
-    pin: GPIO8
+    pin: 
+      number: GPIO8
+      inverted: True
