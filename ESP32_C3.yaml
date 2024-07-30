@@ -94,3 +94,13 @@ sensor:
     accuracy_decimals: 0
     icon: mdi:clock-outline
     entity_category: "diagnostic"
+
+button:
+  - platform: shutdown
+    name: Shut Down
+
+  - platform: restart
+    name: Restart
+  
+  - platform: safe_mode
+    name: Safe Mode
