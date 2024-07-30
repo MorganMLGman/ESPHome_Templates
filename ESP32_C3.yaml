@@ -5,6 +5,11 @@ esphome:
   # Automatically add the mac address to the name
   # so you can use a single firmware for all devices
   name_add_mac_suffix: true
+  platformio_options:
+    board_build.flash_mode: dio
+    board_build.mcu: esp32c3
+    platform_packages:
+      - toolchain-riscv32-esp
 
   # This will allow for project identification,
   # configuration and updates.
@@ -19,9 +24,11 @@ esp32:
 
 # To be able to get logs from the device via serial and api.
 logger:
-
+  hardware_uart: UART0 # USB_SERIAL_JTAG
+  level: DEBUG
 # API is a requirement of the dashboard import.
 api:
+  reboot_timeout: 10min
 
 # OTA is required for Over-the-Air updating
 ota:
@@ -31,6 +38,7 @@ dashboard_import:
   package_import_url: github://MorganMLGman/ESPHome_Templates/ESP32_C3.yaml@master
 
 wifi:
+  reboot_timeout: 10min
   # Set up a wifi access point using the device name above
   ap:
 
