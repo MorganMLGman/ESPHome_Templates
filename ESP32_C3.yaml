@@ -104,3 +104,8 @@ button:
   
   - platform: safe_mode
     name: Safe Mode
+
+light:
+  - platform: status_led
+    name: "User LED"
+    pin: GPIO8
