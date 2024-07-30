@@ -18,6 +18,7 @@ esphome:
 
 esp32:
   board: esp32-c3-devkitm-1
+  variant: esp32c3
   framework:
     type: esp-idf
 
@@ -115,3 +116,7 @@ light:
     pin: 
       number: GPIO8
       inverted: True
+
+sensor:
+  - platform: internal_temperature
+    name: "Internal Temperature"
