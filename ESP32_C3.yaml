@@ -1,6 +1,7 @@
+
 esphome:
-  name: project-template
-  friendly_name: Project Template
+  name: esp32_c3
+  friendly_name: ESP32_C3
   # Automatically add the mac address to the name
   # so you can use a single firmware for all devices
   name_add_mac_suffix: true
@@ -8,7 +9,7 @@ esphome:
   # This will allow for project identification,
   # configuration and updates.
   project:
-    name: esphome.project-template
+    name: MorganMLGman.ESPHome_Templates
     version: "1.0"
 
 esp32:
@@ -26,9 +27,8 @@ api:
 ota:
   - platform: esphome
 
-# This should point to the public location of this yaml file.
 dashboard_import:
-  package_import_url: github://esphome/esphome-project-template/project-template-esp32-c3-adopt.yaml@main
+  package_import_url: github://MorganMLGman/ESPHome_Templates/ESP32_C3.yaml@master
 
 wifi:
   # Set up a wifi access point using the device name above
@@ -38,15 +38,6 @@ wifi:
 # to provision wifi credentials to the device.
 captive_portal:
 
-##########################################################
-# Most projects should not remove anything from above here
-# and should just modify the name, project name/version
-# and git url for the dashboard_import
-##########################################################
-
-
-# Sets up Bluetooth LE (Only on ESP32) to allow the user
-# to provision wifi credentials to the device.
 esp32_improv:
   authorizer: none
 
