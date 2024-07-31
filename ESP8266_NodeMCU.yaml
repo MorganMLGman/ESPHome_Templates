@@ -1,25 +1,17 @@
 
 esphome:
-  name: esp32_c3
-  friendly_name: ESP32_C3
+  name: esp8266_nodemcu
+  friendly_name: ESP8266_NodeMCU
   name_add_mac_suffix: true
-  platformio_options:
-    board_build.flash_mode: dio
-    board_build.mcu: esp32c3
-    board_build.f_cpu: 80000000L
-
+  
   project:
     name: MorganMLGman.ESPHome_Templates
     version: "1.1.1"
 
-esp32:
-  board: esp32-c3-devkitm-1
-  variant: esp32c3
-  framework:
-    type: esp-idf
+esp8266:
+  board: nodemcuv2
 
 logger:
-  hardware_uart: UART0 # USB_SERIAL_JTAG
   level: DEBUG
 
 api:
@@ -29,7 +21,7 @@ ota:
   - platform: esphome
 
 dashboard_import:
-  package_import_url: github://MorganMLGman/ESPHome_Templates/ESP32_C3.yaml@master
+  package_import_url: github://MorganMLGman/ESPHome_Templates/ESP8266_NodeMCU.yaml@master
 
 wifi:
   reboot_timeout: 10min
@@ -37,11 +29,6 @@ wifi:
   ap:
 
 captive_portal:
-
-esp32_improv:
-  authorizer: none
-
-improv_serial:
 
 time:
   - platform: homeassistant
@@ -90,9 +77,6 @@ sensor:
     icon: mdi:clock-outline
     entity_category: "diagnostic"
 
-  - platform: internal_temperature
-    name: "Internal Temperature"
-
 button:
   - platform: shutdown
     name: Shut Down
@@ -107,5 +91,5 @@ light:
   - platform: status_led
     name: "User LED"
     pin: 
-      number: GPIO8
+      number: GPIO2
       inverted: True

@@ -11,6 +11,7 @@ jobs:
       matrix:
         file:
           - ESP32_C3.yaml
+          - ESP8266_NodeMCU.yaml
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4.1.7

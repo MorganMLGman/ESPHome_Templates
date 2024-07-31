@@ -10,6 +10,6 @@ jobs:
     uses: esphome/workflows/.github/workflows/publish.yml@main
     with:
       # CHANGEME: Set the filenames of your config files here:
-      files: ESP32_C3.yaml
+      files: ESP32_C3.yaml,ESP8266_NodeMCU.yaml
       # CHANGEME: Set the name of your project here:
       name: ESPHome_Templates
