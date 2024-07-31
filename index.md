@@ -1,6 +1,6 @@
 # About
 
-Add some information about your project here.
+Here are stored some ESPHome templates.
 
 # Installation
 
