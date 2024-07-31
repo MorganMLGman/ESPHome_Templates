@@ -8,7 +8,7 @@
       "chipFamily": "ESP32-C3",
       "ota": {
         "path": "esp32_c3-esp32c3/esp32_c3-esp32c3.ota.bin",
-        "md5": "135ddc0bb15e5a73056192e24d6e51c6"
+        "md5": "82e33ebcef94f026d634089c3530e6ff"
       },
       "parts": [
         {
@@ -21,7 +21,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "esp8266_nodemcu-esp8266/esp8266_nodemcu-esp8266.ota.bin",
-        "md5": "1b258299abf4d7b0b3bdb41defaa37ca"
+        "md5": "0a718d548af6e183067356a92f45b0c7"
       },
       "parts": [
         {
