@@ -61,9 +61,6 @@ binary_sensor:
     icon: mdi:clock-outline
     entity_category: "diagnostic"
 
-  - platform: internal_temperature
-    name: "Internal Temperature"
-
 button:
   - platform: shutdown
     name: Shut Down
