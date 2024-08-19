@@ -12,7 +12,7 @@ jobs:
       matrix:
         file:
           - ESP32_C3_SuperMini.yaml
-          - ESP322_S3_SuperMini_RGB
+          - ESP32_S3_SuperMini_RGB
           - ESP8266_NodeMCU.yaml
     steps:
       - name: Checkout source code

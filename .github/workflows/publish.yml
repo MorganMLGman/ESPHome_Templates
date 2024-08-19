@@ -12,7 +12,7 @@ jobs:
       # CHANGEME: Set the filenames of your config files here:
       files:
         ESP32_C3_SuperMini.yaml,
-        ESP322_S3_SuperMini_RGB.yaml,
+        ESP32_S3_SuperMini_RGB.yaml,
         ESP8266_NodeMCU.yaml
 
       # CHANGEME: Set the name of your project here:
