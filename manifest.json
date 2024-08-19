@@ -8,7 +8,7 @@
       "chipFamily": "ESP32-C3",
       "ota": {
         "path": "esp32_c3-esp32c3/esp32_c3-esp32c3.ota.bin",
-        "md5": "82e33ebcef94f026d634089c3530e6ff"
+        "md5": "72ed80640de94a29403f1e677a804e1b"
       },
       "parts": [
         {
@@ -18,10 +18,23 @@
       ]
     },
     {
+      "chipFamily": "ESP32-S3",
+      "ota": {
+        "path": "esp32_s3_rgb-esp32s3/esp32_s3_rgb-esp32s3.ota.bin",
+        "md5": "9cbbcfc07508082d96130c11d6dec62b"
+      },
+      "parts": [
+        {
+          "path": "esp32_s3_rgb-esp32s3/esp32_s3_rgb-esp32s3.factory.bin",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "chipFamily": "ESP8266",
       "ota": {
         "path": "esp8266_nodemcu-esp8266/esp8266_nodemcu-esp8266.ota.bin",
-        "md5": "0a718d548af6e183067356a92f45b0c7"
+        "md5": "8bed81c4d76f2c32a0248694643fcc2d"
       },
       "parts": [
         {
