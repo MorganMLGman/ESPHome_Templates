@@ -38,12 +38,14 @@ time:
 
 text_sensor:
   - platform: ethernet_info
-    entity_category: "diagnostic"
-    ip_address:
+    ip_address:      
+      entity_category: "diagnostic"
       name: IP Address
     dns_address:
+      entity_category: "diagnostic"
       name: DNS Address
     mac_address:
+      entity_category: "diagnostic"
       name: MAC Address
 
   - platform: version
@@ -54,12 +56,16 @@ binary_sensor:
     name: Status
     device_class: connectivity
 
+sensor:
   - platform: uptime
     name: Uptime
+    entity_category: "diagnostic"
     update_interval: 60s
     accuracy_decimals: 0
-    icon: mdi:clock-outline
+
+  - platform: internal_temperature
     entity_category: "diagnostic"
+    name: "Internal Temperature"
 
 button:
   - platform: shutdown
