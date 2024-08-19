@@ -17,12 +17,14 @@ esp32:
 logger:
   level: DEBUG
 
+api:
+  reboot_timeout: 10min
+
 ota:
   - platform: esphome
 
 dashboard_import:
   package_import_url: github://MorganMLGman/ESPHome_Templates/ESP32_S3_SuperMini_RGB.yaml@master
-
 
 wifi:
   reboot_timeout: 10min
