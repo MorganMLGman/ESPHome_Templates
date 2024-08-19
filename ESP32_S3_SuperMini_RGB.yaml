@@ -3,9 +3,9 @@ esphome:
   friendly_name: ESP32_S3_RGB
   name_add_mac_suffix: True
 
-project:
-  name: MorganMLGman.ESPHome_Templates
-  version: "1.1.2"
+  project:
+    name: MorganMLGman.ESPHome_Templates
+    version: "1.1.1"
 
 esp32:
   board: esp32-s3-devkitc-1
