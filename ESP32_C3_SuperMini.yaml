@@ -29,7 +29,7 @@ ota:
   - platform: esphome
 
 dashboard_import:
-  package_import_url: github://MorganMLGman/ESPHome_Templates/ESP32_C3.yaml@master
+  package_import_url: github://MorganMLGman/ESPHome_Templates/ESP32_C3_SuperMini.yaml@master
 
 wifi:
   reboot_timeout: 10min

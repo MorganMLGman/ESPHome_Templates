@@ -1,0 +1,99 @@
+esphome:
+  name: esp32_s3_rgb
+  friendly_name: ESP32_S3_RGB
+  name_add_mac_suffix: True
+
+project:
+  name: MorganMLGman.ESPHome_Templates
+  version: "1.1.1"
+
+esp32:
+  board: esp32-s3-devkitc-1
+  variant: esp32s3
+  framework:
+    type: esp-idf
+    version: recommended
+  sdkconfig_options:
+      COMPILER_OPTIMIZATION_SIZE: y
+
+logger:
+  level: DEBUG
+
+ota:
+  - platform: esphome
+
+dashboard_import:
+  package_import_url: github://MorganMLGman/ESPHome_Templates/ESP322_S3_SuperMini_RGB.yaml@master
+
+
+wifi:
+  reboot_timeout: 10min
+
+  ap:
+
+captive_portal:
+
+esp32_improv:
+  authorizer: none
+
+improv_serial:
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+
+text_sensor:
+  - platform: version
+    name: ESPHome Version
+    entity_category: "diagnostic"
+
+  - platform: wifi_info
+    ip_address:
+      name: IP Address
+      entity_category: "diagnostic"
+    ssid:
+      name: WiFi SSID
+      entity_category: "diagnostic"
+    bssid:
+      name: WiFi BSSID
+      entity_category: "diagnostic"
+
+binary_sensor:
+  - platform: status
+    name: Status
+    device_class: connectivity
+
+sensor:
+  - platform: wifi_signal
+    name: WiFi Signal dB
+    id: wifi_signal_db
+    update_interval: 60s
+    entity_category: "diagnostic"
+
+  - platform: copy
+    source_id: wifi_signal_db
+    name: WiFi Signal Percent
+    filters:
+      - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);
+    unit_of_measurement: "Signal %"
+    entity_category: "diagnostic"
+
+  - platform: uptime
+    name: Uptime
+    update_interval: 60s
+    accuracy_decimals: 0
+    icon: mdi:clock-outline
+    entity_category: "diagnostic"
+
+  - platform: internal_temperature
+    name: "Internal Temperature"
+
+button:
+  - platform: shutdown
+    name: Shut Down
+
+  - platform: restart
+    name: Restart
+  
+  - platform: safe_mode
+    name: Safe Mode
