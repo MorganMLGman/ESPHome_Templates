@@ -1,0 +1,75 @@
+esphome:
+  name: wt32_eth1
+  friendly_name: WT32_ETH1
+  name_add_mac_suffix: True
+
+  project:
+    name: MorganMLGman.ESPHome_Templates
+    version: "1.1.1"
+
+esp32:
+  board: wt32-eth01
+  framework:
+    type: esp-idf
+
+logger:
+  level: DEBUG
+
+api:
+  reboot_timeout: 10min
+
+ota:
+  - platform: esphome
+
+dashboard_import:
+  package_import_url: github://MorganMLGman/ESPHome_Templates/WT32_ETH1.yaml@master
+
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO0_IN
+  phy_addr: 1
+  power_pin: GPIO16
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+
+text_sensor:
+  - platform: ethernet_info
+    entity_category: "diagnostic"
+    ip_address:
+      name: IP Address
+    dns_address:
+      name: DNS Address
+    mac_address:
+      name: MAC Address
+
+  - platform: version
+    name: ESPHome Version
+
+binary_sensor:
+  - platform: status
+    name: Status
+    device_class: connectivity
+
+  - platform: uptime
+    name: Uptime
+    update_interval: 60s
+    accuracy_decimals: 0
+    icon: mdi:clock-outline
+    entity_category: "diagnostic"
+
+  - platform: internal_temperature
+    name: "Internal Temperature"
+
+button:
+  - platform: shutdown
+    name: Shut Down
+
+  - platform: restart
+    name: Restart
+  
+  - platform: safe_mode
+    name: Safe Mode
