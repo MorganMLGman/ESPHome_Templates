@@ -1,7 +1,7 @@
 
 esphome:
-  name: esp32_c3
-  friendly_name: ESP32_C3
+  name: esp32_c3_super_mini
+  friendly_name: ESP32_C3_SuperMini
   name_add_mac_suffix: true
   platformio_options:
     board_build.flash_mode: dio

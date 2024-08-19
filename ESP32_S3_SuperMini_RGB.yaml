@@ -1,7 +1,9 @@
 esphome:
-  name: esp32_s3_rgb
-  friendly_name: ESP32_S3_RGB
+  name: esp32_s3_super_mini_rgb
+  friendly_name: ESP32_S3_SuperMini_RGB
   name_add_mac_suffix: True
+  platformio_options:
+    board_build.flash_mode: dio
 
   project:
     name: MorganMLGman.ESPHome_Templates
@@ -97,3 +99,18 @@ button:
   
   - platform: safe_mode
     name: Safe Mode
+
+light:
+  # - platform: status_led
+  #   name: "User LED"
+  #   pin: 
+  #     number: GPIO48
+  #     inverted: True
+
+  - platform: esp32_rmt_led_strip
+    rgb_order: GRB
+    pin: GPIO48
+    num_leds: 1
+    rmt_channel: 0
+    chipset: ws2812
+    name: "User LED"
