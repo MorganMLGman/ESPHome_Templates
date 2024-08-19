@@ -114,3 +114,6 @@ light:
     rmt_channel: 0
     chipset: ws2812
     name: "User LED"
+    effects:
+      - strobe:
+      - addressable_rainbow:
