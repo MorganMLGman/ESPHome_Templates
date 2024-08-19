@@ -14,7 +14,7 @@ jobs:
           - ESP32_C3_SuperMini.yaml
           - ESP32_S3_SuperMini_RGB
           - ESP8266_NodeMCU.yaml
-          - WS32_ETH1.yaml
+          - WT32_ETH1.yaml
 
     steps:
       - name: Checkout source code
