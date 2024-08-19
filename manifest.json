@@ -7,12 +7,12 @@
     {
       "chipFamily": "ESP32-C3",
       "ota": {
-        "path": "esp32_c3-esp32c3/esp32_c3-esp32c3.ota.bin",
-        "md5": "72ed80640de94a29403f1e677a804e1b"
+        "path": "esp32_c3_super_mini-esp32c3/esp32_c3_super_mini-esp32c3.ota.bin",
+        "md5": "485efa7a6a612213fd768de7abb7e173"
       },
       "parts": [
         {
-          "path": "esp32_c3-esp32c3/esp32_c3-esp32c3.factory.bin",
+          "path": "esp32_c3_super_mini-esp32c3/esp32_c3_super_mini-esp32c3.factory.bin",
           "offset": 0
         }
       ]
@@ -20,12 +20,12 @@
     {
       "chipFamily": "ESP32-S3",
       "ota": {
-        "path": "esp32_s3_rgb-esp32s3/esp32_s3_rgb-esp32s3.ota.bin",
-        "md5": "9cbbcfc07508082d96130c11d6dec62b"
+        "path": "esp32_s3_super_mini_rgb-esp32s3/esp32_s3_super_mini_rgb-esp32s3.ota.bin",
+        "md5": "adf0407e471fd2df34f1044940504044"
       },
       "parts": [
         {
-          "path": "esp32_s3_rgb-esp32s3/esp32_s3_rgb-esp32s3.factory.bin",
+          "path": "esp32_s3_super_mini_rgb-esp32s3/esp32_s3_super_mini_rgb-esp32s3.factory.bin",
           "offset": 0
         }
       ]
@@ -34,7 +34,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "esp8266_nodemcu-esp8266/esp8266_nodemcu-esp8266.ota.bin",
-        "md5": "8bed81c4d76f2c32a0248694643fcc2d"
+        "md5": "265c5d4dcaf894db763d71241a8ddfaa"
       },
       "parts": [
         {
