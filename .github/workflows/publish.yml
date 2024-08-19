@@ -13,7 +13,8 @@ jobs:
       files:
         ESP32_C3_SuperMini.yaml,
         ESP32_S3_SuperMini_RGB.yaml,
-        ESP8266_NodeMCU.yaml
+        ESP8266_NodeMCU.yaml,
+        WS32_ETH1.yaml
 
       # CHANGEME: Set the name of your project here:
       name: ESPHome_Templates
