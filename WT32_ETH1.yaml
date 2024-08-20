@@ -10,7 +10,7 @@ esphome:
 esp32:
   board: wt32-eth01
   framework:
-    type: esp-idf
+    type: arduino
 
 logger:
   level: DEBUG
