@@ -2,6 +2,8 @@ esphome:
   name: wt32_eth1
   friendly_name: WT32_ETH1
   name_add_mac_suffix: True
+  platformio_options:
+    board_build.flash_mode: dio
 
   project:
     name: MorganMLGman.ESPHome_Templates
