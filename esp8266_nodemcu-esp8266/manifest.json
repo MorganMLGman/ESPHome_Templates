@@ -2,7 +2,7 @@
   "chipFamily": "ESP8266",
   "ota": {
     "path": "esp8266_nodemcu-esp8266/esp8266_nodemcu-esp8266.ota.bin",
-    "md5": "102b20f26a163c9a43fed80840c4509c"
+    "md5": "ba90d8fc5745739967c8a67df896eacf"
   },
   "parts": [
     {
