@@ -109,6 +109,7 @@ light:
 
   - platform: esp32_rmt_led_strip
     rgb_order: GRB
+    id: user_led
     pin: GPIO48
     num_leds: 1
     rmt_channel: 0
