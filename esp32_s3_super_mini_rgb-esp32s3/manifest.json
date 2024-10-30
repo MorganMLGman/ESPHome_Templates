@@ -2,7 +2,7 @@
   "chipFamily": "ESP32-S3",
   "ota": {
     "path": "esp32_s3_super_mini_rgb-esp32s3/esp32_s3_super_mini_rgb-esp32s3.ota.bin",
-    "md5": "e49fa45d7f04fe26c6e939f0ce30b754"
+    "md5": "64bc5f89b6a7e81c6e9d2daeee8fa041"
   },
   "parts": [
     {
