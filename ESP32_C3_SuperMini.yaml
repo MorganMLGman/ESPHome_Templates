@@ -54,17 +54,21 @@ text_sensor:
 
   - platform: wifi_info
     ip_address:
+      id: text_ip_address
       name: IP Address
       entity_category: "diagnostic"
     ssid:
+      id: text_wifi_ssid
       name: WiFi SSID
       entity_category: "diagnostic"
     bssid:
+      id: text_wifi_bssid
       name: WiFi BSSID
       entity_category: "diagnostic"
 
 binary_sensor:
   - platform: status
+    id: esp_status
     name: Status
     device_class: connectivity
 
@@ -76,6 +80,7 @@ sensor:
     entity_category: "diagnostic"
 
   - platform: copy
+    id: wifi_percent
     source_id: wifi_signal_db
     name: WiFi Signal Percent
     filters:
@@ -84,6 +89,7 @@ sensor:
     entity_category: "diagnostic"
 
   - platform: uptime
+    id: uptime_counter
     name: Uptime
     update_interval: 60s
     accuracy_decimals: 0
@@ -91,6 +97,7 @@ sensor:
     entity_category: "diagnostic"
 
   - platform: internal_temperature
+    id: internal_temp
     name: "Internal Temperature"
 
 button:
