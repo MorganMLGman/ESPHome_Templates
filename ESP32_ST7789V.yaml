@@ -8,7 +8,7 @@ esphome:
 
   project:
     name: MorganMLGman.ESPHome_Templates
-    version: "1.1.1"
+    version: "1.1.2"
 
 esp32:
   board: esp32dev
@@ -49,14 +49,9 @@ light:
     restore_mode: ALWAYS_ON
 
 display:
-  - platform: ili9xxx
-    model: ST7789V
+  - platform: st7789v
+    model: TTGO TDisplay 135x240
     dc_pin: GPIO16
     reset_pin: GPIO23
     invert_colors: false
     show_test_card: true
-    dimensions:
-      height: 240
-      width: 135
-      offset_width: 52
-      offset_height: 40
