@@ -54,3 +54,4 @@ display:
     dc_pin: GPIO16
     reset_pin: GPIO23
     show_test_card: true
+    backlight_pin: no
