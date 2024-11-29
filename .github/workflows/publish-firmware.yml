@@ -15,6 +15,7 @@ jobs:
       #### Modify below here to match your project ####
       files: |
         ESP32_ST7789V.factory.yaml
+        WT32_ETH1.factory.yaml
       esphome-version: 2024.11.2
       combined-name: ESPHome_Templates
       #### Modify above here to match your project ####
