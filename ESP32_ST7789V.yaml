@@ -8,7 +8,7 @@ esphome:
 
   project:
     name: MorganMLGman.ESPHome_Templates
-    version: "1.1.7"
+    version: "1.1.8"
 
 esp32:
   board: esp32dev
@@ -35,7 +35,10 @@ binary_sensor:
   - platform: gpio
     pin:
       number: GPIO0
-      inverted: True
+      inverted: true
+      mode:
+        input: true
+        pullup: true
     name: "Button 1"
     id: button_1
 
@@ -48,8 +51,16 @@ binary_sensor:
 
 font:
   - file: "gfonts://Roboto"
-    id: roboto20
-    size: 20
+    id: roboto12
+    size: 12
+
+  - file: "gfonts://Roboto"
+    id: roboto24
+    size: 24
+
+  - file: "gfonts://Roboto"
+    id: roboto48
+    size: 48
 
 output:
   - platform: ledc
