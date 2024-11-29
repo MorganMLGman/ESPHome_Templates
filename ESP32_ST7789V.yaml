@@ -62,12 +62,3 @@ light:
     name: "Display Backlight"
     id: back_light
     restore_mode: ALWAYS_ON
-
-display:
-  - platform: st7789v
-    id: display_st7789v
-    model: TTGO TDisplay 135x240
-    dc_pin: GPIO16
-    reset_pin: GPIO23
-    show_test_card: true
-    backlight_pin: no
