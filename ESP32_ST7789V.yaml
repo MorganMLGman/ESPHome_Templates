@@ -21,6 +21,7 @@ esp32:
 update:
   - platform: http_request
     id: update_http_request
+    update_interval: 1h
     name: ESP32_ST7789V Firmware
     source: https://morganmlgman.github.io/ESPHome_Templates/firmware/ESPHome_Templates.manifest.json
     disabled_by_default: false
