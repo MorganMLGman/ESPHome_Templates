@@ -22,6 +22,11 @@ api:
 
 ota:
   - platform: esphome
+    id: ota_esphome
+  - platform: http_request
+    id: ota_http_request
+
+http_request:
 
 wifi:
   reboot_timeout: 10min
@@ -29,6 +34,13 @@ wifi:
   ap:
 
 captive_portal:
+
+update:
+  - platform: http_request
+    id: update_http_request
+    name: ESP32_ST7789V Firmware
+    source: https://morganmlgman.github.io/ESPHome_Templates/firmware/ESPHome_Templates.manifest.json
+    disabled_by_default: true
 
 spi:
   clk_pin: GPIO18
