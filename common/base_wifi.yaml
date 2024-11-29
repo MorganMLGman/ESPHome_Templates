@@ -41,6 +41,7 @@ text_sensor:
 
 binary_sensor:
   - platform: status
+    id: esp_status
     name: Status
     device_class: connectivity
 
