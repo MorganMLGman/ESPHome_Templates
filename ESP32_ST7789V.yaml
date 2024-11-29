@@ -1,3 +1,6 @@
+packages:
+  device_base: !include common/base_wifi.yaml
+
 esphome:
   name: esp32_st7789v
   friendly_name: ESP32_ST7789V
@@ -5,7 +8,7 @@ esphome:
 
   project:
     name: MorganMLGman.ESPHome_Templates
-    version: "1.1.4"
+    version: "1.2.0"
 
 esp32:
   board: esp32dev
@@ -14,95 +17,16 @@ esp32:
     type: esp-idf
     version: recommended
 
-logger:
-  level: DEBUG
-
-api:
-  reboot_timeout: 10min
-
-ota:
-  - platform: esphome
-    id: ota_esphome
-  - platform: http_request
-    id: ota_http_request
-
-http_request:
-
-wifi:
-  reboot_timeout: 10min
-
-  ap:
-
-captive_portal:
 
 update:
   - platform: http_request
     id: update_http_request
     name: ESP32_ST7789V Firmware
     source: https://morganmlgman.github.io/ESPHome_Templates/firmware/ESPHome_Templates.manifest.json
-    disabled_by_default: true
+    disabled_by_default: false
 
 spi:
   clk_pin: GPIO18
   mosi_pin: GPIO19
   # miso_pin: GPIO
 
-time:
-  - platform: homeassistant
-    id: homeassistant_time
-
-text_sensor:
-  - platform: version
-    name: ESPHome Version
-    entity_category: "diagnostic"
-
-  - platform: wifi_info
-    ip_address:
-      name: IP Address
-      entity_category: "diagnostic"
-    ssid:
-      name: WiFi SSID
-      entity_category: "diagnostic"
-    bssid:
-      name: WiFi BSSID
-      entity_category: "diagnostic"
-
-binary_sensor:
-  - platform: status
-    name: Status
-    device_class: connectivity
-
-sensor:
-  - platform: wifi_signal
-    name: WiFi Signal dB
-    id: wifi_signal_db
-    update_interval: 60s
-    entity_category: "diagnostic"
-
-  - platform: copy
-    source_id: wifi_signal_db
-    name: WiFi Signal Percent
-    filters:
-      - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);
-    unit_of_measurement: "Signal %"
-    entity_category: "diagnostic"
-
-  - platform: uptime
-    name: Uptime
-    update_interval: 60s
-    accuracy_decimals: 0
-    icon: mdi:clock-outline
-    entity_category: "diagnostic"
-
-  - platform: internal_temperature
-    name: "Internal Temperature"
-
-button:
-  - platform: shutdown
-    name: Shut Down
-
-  - platform: restart
-    name: Restart
-  
-  - platform: safe_mode
-    name: Safe Mode
