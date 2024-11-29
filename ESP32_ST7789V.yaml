@@ -31,6 +31,19 @@ spi:
   mosi_pin: GPIO19
   # miso_pin: GPIO
 
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO0
+    name: "Button 1"
+    id: button_1
+
+  - platform: gpio
+    pin:
+      number: GPIO35
+    name: "Button 2"
+    id: button_2
+
 font:
   - file: "gfonts://Roboto"
     id: roboto20
