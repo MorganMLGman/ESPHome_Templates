@@ -65,6 +65,7 @@ light:
 
 display:
   - platform: st7789v
+    id: display_st7789v
     model: TTGO TDisplay 135x240
     dc_pin: GPIO16
     reset_pin: GPIO23
