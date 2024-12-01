@@ -8,7 +8,7 @@ esphome:
 
   project:
     name: MorganMLGman.ESPHome_Templates
-    version: "1.1.9"
+    version: "1.1.10"
 
 esp32:
   board: esp32dev
@@ -25,6 +25,10 @@ update:
     name: ESP32_ST7789V Firmware
     source: https://morganmlgman.github.io/ESPHome_Templates/firmware/ESPHome_Templates.manifest.json
     disabled_by_default: false
+
+i2c:
+  sda: GPIO21
+  scl: GPIO22
 
 spi:
   clk_pin: GPIO18
