@@ -10,7 +10,7 @@ esphome:
 
   project:
     name: MorganMLGman.ESPHome_Templates
-    version: "1.1.0"
+    version: "1.1.1"
 
 esp32:
   board: wt32-eth01
