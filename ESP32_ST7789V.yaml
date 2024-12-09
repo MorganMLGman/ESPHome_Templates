@@ -53,19 +53,6 @@ binary_sensor:
     name: "Button 2"
     id: button_2
 
-font:
-  - file: "gfonts://Roboto"
-    id: roboto12
-    size: 12
-
-  - file: "gfonts://Roboto"
-    id: roboto24
-    size: 24
-
-  - file: "gfonts://Roboto"
-    id: roboto48
-    size: 48
-
 output:
   - platform: ledc
     pin: GPIO4
